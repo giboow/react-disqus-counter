@@ -1,6 +1,6 @@
 /* eslint-disable no-var */
 
-var path = require('path');
+var path = require('path')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -13,21 +13,21 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
-     template: path.join(__dirname, 'index.html'),
-     hash: false,
-     filename: 'index.html',
-     inject: 'body'
+      template: path.join(__dirname, 'index.html'),
+      hash: false,
+      filename: 'index.html',
+      inject: 'body'
     })
   ],
-  resolve : {
-    alias : {
-      'react-disqus-counter': path.join(__dirname, '../../lib/'),
+  resolve: {
+    alias: {
+      'react-disqus-counter': path.join(__dirname, '../../lib/')
     },
-    extension : ['', '.js']
+    extension: ['', '.js']
   },
   module: {
     loaders: [
@@ -44,4 +44,4 @@ module.exports = {
       }
     ]
   }
-};
+}
