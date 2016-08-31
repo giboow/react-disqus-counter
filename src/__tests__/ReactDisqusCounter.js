@@ -54,7 +54,6 @@ test('Should render link element with content', t => {
 })
 
 test('Should insert script', t => {
-
   const component = renderIntoDocument(
     <ReactDisqusCounter shortname='test' url='/' isLink >
       <span>{`My Content`}</span>
@@ -73,5 +72,4 @@ test('Should insert script', t => {
   // try component did update and call reset
   component.componentDidUpdate()
   expect(scripts.length).toEqual(1)
-
 })

@@ -23,7 +23,6 @@ export default class ReactDiscusCounter extends Component {
     this._resetComments()
   }
 
-
   _resetComments () {
     this._addDisqusScript()
     if (typeof DISQUSWIDGETS !== 'undefined') {
