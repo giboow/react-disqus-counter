@@ -4,7 +4,6 @@
 React Discus counter component
 
 # Usage
-____
 
 `npm install --save react-disqus-counter`
 
