@@ -1,8 +1,8 @@
 {
   "name": "react-disqus-counter",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React Discus counter component",
-  "main": "lib/ReactDiscusCounter.js",
+  "main": "lib/index.js",
   "files": [
     "lib/*"
   ],
