@@ -20,10 +20,14 @@ test('Should render non-link element with no default content', t => {
 test('Should render non-link element with content', t => {
   const renderer = createRenderer()
   renderer.render(
-    <ReactDiscusCounter shortname='test' url='/' content='My Content' />
+    <ReactDiscusCounter shortname='test' url='/'>
+      {`My Content`}
+    </ ReactDiscusCounter>
   )
   expect(renderer.getRenderOutput()).toEqualJSX(
-    <span className={['disqus-comment-count']} data-disqus-url='/'>{`My Content`}</span>
+    <span className={['disqus-comment-count']} data-disqus-url='/'>
+      {`My Content`}
+    </span>
   )
 })
 
@@ -40,7 +44,9 @@ test('Should render link element with no default content', t => {
 test('Should render link element with content', t => {
   const renderer = createRenderer()
   renderer.render(
-    <ReactDiscusCounter shortname='test' url='/' isLink content={`My Content`} />
+    <ReactDiscusCounter shortname='test' url='/' isLink >
+      {`My Content`}
+    </ReactDiscusCounter>
   )
   expect(renderer.getRenderOutput()).toEqualJSX(
     <a href='/#disqus_thread'>{`My Content`}</a>

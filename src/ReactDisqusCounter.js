@@ -8,7 +8,7 @@ export default class ReactDiscusCounter extends Component {
   static propTypes = {
     shortname: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
-    content: PropTypes.string,
+    children: PropTypes.element,
     isLink: PropTypes.bool
   }
 
@@ -55,7 +55,7 @@ export default class ReactDiscusCounter extends Component {
     if (this.props.isLink) {
       counterElement = React.createElement(
         'a', { href: this.props.url + '#disqus_thread' },
-        this.props.content
+        this.props.children
       )
     } else {
       counterElement = React.createElement(
@@ -64,7 +64,7 @@ export default class ReactDiscusCounter extends Component {
           className: [ 'disqus-comment-count' ],
           'data-disqus-url': this.props.url
         },
-        this.props.content
+        this.props.children
       )
     }
     return (

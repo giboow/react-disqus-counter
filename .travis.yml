@@ -1,0 +1,21 @@
+language: node_js
+
+node_js:
+  - '5'
+  - '4'
+
+before_install:
+  # ensure npm @ 3 is installed (check only first number of npm)
+  - NPM_VERSION=$(npm --version)
+  - 'if [ "${NPM_VERSION:0:2}" = "2." ]; then npm i -g npm@latest; fi'
+  # faster npm install
+  - npm set progress=false
+  # remove useless/non listed deps
+  - npm prune
+
+env:
+  global:
+    - secure: >-
+        sbdq1vi+MFqGdE0k5xuJf5tLmQLHtEUav6XJQSqbQobucusy8oLr2gM0Izk2MHkZy9P1bLyAI640vVVRia9kfEukReu8d5Cf8t3Zvb3c1nwUMV7c4HPJ9lMdVJNVFQHljJWqjfUhZfbqNRa6eDbxh3dknv9vX9y0ju2WqqqTNWQ/5AVY/fGKjlmeKyy3AZD1493pZBV4P8WXgHUA1EUejgctJKuHTy5mt1cJzdwINkW/2bGyl8zrcpa9TWlvRNirz6X/4vOE7CKGWOKzoJeyXBaZxuTwDjqp0VCtZiDt7TBGZT7WAY0zORl9skTwF7Z3ZHrGJ5f+eMM20NsK3gYotKTv2yrfxnmZfCuSrUNT0lu1btvTrgq5ZrOuA6ZfpNr56nkkIcySpKIv06MmrFCT7CavZK8MmNbfrf9wEUBsZK48lB8FSKjd0/SWQSRHaK9kSVRjr/tGegKdY9WDHKbcNYd+Cwqv23o0OcN6CFNMKw03Xwxl3unZWix5fDXIpOtSQI/i4wZn6OGJ7AKZIy1RA/vyNK0VidJdqsMc+cntnlIlwao851Cb8PJWGufHFQ+SGdHk6+7NtaoRy/68iKa9EefthBdyrijenEouyQXIyxtjBo0FW1GGdCeUdq7ism6GMuaiaC1A0fYR3k4uOxw2nphGQFrkRANDWyhZHf/JUdk=
+    - secure: >-
+        Ak+souuQaF6aMACjGDOEpVch+zsoqnh9VNxjlIAVetfLsJ47CgJnrrZeZETEnvO5lalf2N8ZXW5nHbeHeafOQekFcLPL0d00OAPNJPEKkmKfeWSdTuGqFhTRw0ESWKCWkn0GSY1ZKm95yUue/UgA8bVU5k9/c02G3SqpaKbLhj7bPm5hcSnNY4avcmOlbRojtwrhaSNLuyLrvvEvYe5TA1D+kMQm86Qe9kvhHvu6kEIkcJliUlUmRKxilMdIHUpWeV7kaSngbn2rdV9nYp624cTd6tT13+P6OO01vT489dsTtIFCCHENwOLFRIbmq7JXbF1daXlPYnu9R4HlzX0oFGdudPnPMhhmKt/MkxlBNNs7flknX5DFPDCPHesSOFIYoPq+kXA5aKUSM3iNsXg2IhR790FxZ2BfznO2LgnEEtauh3jQhfX5IKeUgcTt9JM8lYgejtGj3RrvPOZdSYIOWNDkwj0SUJ6hPqoNmsP0Ox7/tBGjaHuwX6k9uUjBTzTe8I2sqV4nZndoz6lM6uC4qDgG9wiWQ04/f4T5/6taG/HACX0I6vJxuOAFtYAiOCdW2yhqglvbTzvw9Kpgw8I3TStfKNE5Eu5nJe7uplkkrdm9nyJGHjdz0SH7PKWky/lEZzDnf4OT2VAhpzYEOyo9El5kH/hOsyroNsmoPmZz0WY=
