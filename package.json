@@ -1,11 +1,11 @@
 {
   "name": "react-disqus-counter",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React Discus counter component",
   "main": "lib/ReactDiscusCounter.js",
   "files": [
-   "lib/*"
- ],
+    "lib/*"
+  ],
   "scripts": {
     "prebabelify": "rimraf lib",
     "babelify": "babel src -d lib",
@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/giboow/react-disqus-counter#readme",
   "peerDependencies": {
-      "react": "^0.14.0 || ^15.0.0-0"
+    "react": "^0.14.0 || ^15.0.0-0"
   },
   "devDependencies": {
     "ava": "^0.16.0",
