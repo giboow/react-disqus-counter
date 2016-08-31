@@ -1,5 +1,4 @@
 /* global DISQUSWIDGETS */
-
 import React, { Component, PropTypes } from 'react'
 
 let __scriptAdded = false
@@ -13,12 +12,10 @@ export default class ReactDiscusCounter extends Component {
   }
 
   static defaultProps = {
-    content: '',
     isLink: false
   }
 
   componentDidMount () {
-    this._addDisqusScript()
     this._resetComments()
   }
 
@@ -26,7 +23,9 @@ export default class ReactDiscusCounter extends Component {
     this._resetComments()
   }
 
+
   _resetComments () {
+    this._addDisqusScript()
     if (typeof DISQUSWIDGETS !== 'undefined') {
       DISQUSWIDGETS.getCount({ reset: true })
     }
