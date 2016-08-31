@@ -5,6 +5,10 @@ node_js:
   - '5'
   - '4'
 
+# fail asap when there is a failure
+matrix:
+  fast_finish: true
+
 before_install:
   # ensure npm @ 3 is installed (check only first number of npm)
   - NPM_VERSION=$(npm --version)
