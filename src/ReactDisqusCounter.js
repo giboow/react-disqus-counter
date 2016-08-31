@@ -17,10 +17,6 @@ export default class ReactDiscusCounter extends Component {
     isLink: false
   }
 
-  componentWillMount () {
-    this._addDisqusScript()
-  }
-
   componentDidMount () {
     this._resetComments()
   }
