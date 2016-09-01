@@ -99,8 +99,5 @@
     ],
     "sourceMap": false,
     "instrument": false
-  },
-  "dependencies": {
-    "sinon-spy-react": "^2.0.0"
   }
 }
